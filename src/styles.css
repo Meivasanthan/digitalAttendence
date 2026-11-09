@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; background:#fafafa; color:#222; padding:20px; }
+.container { max-width:900px; margin:0 auto; background:#fff; padding:22px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+h1,h2,h3 { color:#333; }
+.card { display:flex; gap:12px; margin:12px 0; }
+.card.small { padding:8px; }
+button { padding:8px 12px; border-radius:6px; border:1px solid #ccc; background:#f2f2f2; cursor:pointer; }
+.form input, .form select, .form label { display:block; width:100%; margin:8px 0; padding:8px; }
+table { width:100%; border-collapse:collapse; margin-top:12px; }
+table th, table td { text-align:left; padding:8px; border-bottom:1px solid #eee; }
+.note { font-size:0.9rem; color:#666; margin-top:8px; }

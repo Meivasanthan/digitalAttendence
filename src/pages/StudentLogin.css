@@ -1,0 +1,50 @@
+.student-login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b262c; /* dark blue background */
+  font-family: Arial, sans-serif;
+}
+
+.login-card {
+  background-color: #00b894; /* green card */
+  padding: 40px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.login-card h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.login-card label {
+  color: #fff;
+  font-weight: bold;
+}
+
+.login-card input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.login-card button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #0f4c75; /* dark blue button */
+  color: #00b894; /* green text */
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-card button:hover {
+  background-color: #3282b8;
+}

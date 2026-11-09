@@ -1,0 +1,270 @@
+/* === Background & Layout === */
+.home-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🔹 Background image layer with blur */
+.home-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(135deg, rgba(15, 76, 117, 0.6), rgba(0, 184, 61, 0.6)),
+    url("../assets/bg.jpg") center/cover no-repeat;
+  filter: blur(2px); /* light blur */
+  z-index: 0;
+}
+
+/* 🔹 Keep content above background */
+.home-container * {
+  position: relative;
+  z-index: 1;
+}
+
+/* === Header (Logo + Institute Name) === */
+.home-header {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.college-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 0;
+  background: transparent;
+}
+
+.college-name h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #faf8f8;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.college-name p {
+  margin: 3px 0 0 0;
+  font-size: 1rem;
+  color: #dfe6e9;
+}
+
+/* === Center Title === */
+.home-container h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f5f4f4;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* === Login Buttons === */
+.home-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.home-buttons button {
+  padding: 15px 50px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #08ab2c;
+  color: #000104;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.home-buttons button:hover {
+  background-color: #7a94a6;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* === NEW: Dashboard Access Section === */
+.dashboard-access {
+  margin-top: 20px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 600px;
+  width: 90%;
+}
+
+.dashboard-access h3 {
+  margin-bottom: 20px;
+  color: #f5f4f4;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dashboard-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dashboard-buttons button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  min-width: 200px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.ac-btn {
+  background-color: #ff6b35; /* Orange color for AC */
+  color: white;
+}
+
+.proctor-btn {
+  background-color: #4ecdc4; /* Teal color for Proctor */
+  color: white;
+}
+
+.dashboard-buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ac-btn:hover {
+  background-color: #e55a2b;
+}
+
+.proctor-btn:hover {
+  background-color: #3db8af;
+}
+
+/* Ensure Link components don't affect button styling */
+.dashboard-buttons a {
+  text-decoration: none;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .home-header {
+    top: 15px;
+    left: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .college-logo {
+    height: 60px;
+  }
+
+  .college-name h1 {
+    font-size: 1.4rem;
+  }
+
+  .college-name p {
+    font-size: 0.9rem;
+  }
+
+  .home-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .home-buttons button {
+    width: 200px;
+    padding: 12px 30px;
+  }
+
+  .dashboard-access {
+    margin-top: 10px;
+    padding: 20px 15px;
+    width: 85%;
+  }
+
+  .dashboard-access h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .dashboard-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dashboard-buttons button {
+    width: 100%;
+    min-width: auto;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header {
+    top: 10px;
+    left: 15px;
+  }
+
+  .college-logo {
+    height: 50px;
+  }
+
+  .college-name h1 {
+    font-size: 1.2rem;
+  }
+
+  .college-name p {
+    font-size: 0.8rem;
+  }
+
+  .home-container h2 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
+
+  .home-buttons button {
+    width: 180px;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+
+  .dashboard-access {
+    padding: 15px 10px;
+  }
+
+  .dashboard-access h3 {
+    font-size: 1rem;
+  }
+
+  .dashboard-buttons button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}

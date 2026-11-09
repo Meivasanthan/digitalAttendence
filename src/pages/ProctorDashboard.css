@@ -1,0 +1,1014 @@
+.proctor-dashboard-container {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%);
+  min-height: 100vh;
+  color: #fff;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dashboard-header h2 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  font-weight: 700;
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+/* Staff Selection Section */
+.staff-selection-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.staff-selection-section h3 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.staff-filters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: end;
+}
+
+.selection-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.selection-group label {
+  font-weight: 600;
+  color: #f8fafc;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.selection-group select,
+.selection-group input {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  color: #1e293b;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.selection-group select:focus,
+.selection-group input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3);
+  background: white;
+}
+
+/* Staff Info Card */
+.staff-info-card {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(14, 165, 233, 0.2) 100%);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border-left: 4px solid #38bdf8;
+  backdrop-filter: blur(10px);
+}
+
+.staff-info-card h4 {
+  margin: 0 0 15px 0;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.staff-info-card p {
+  margin: 8px 0;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+}
+
+/* Students Grid */
+.proctor-students-grid {
+  margin-top: 30px;
+}
+
+.proctor-students-grid h3 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.students-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.student-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border-color: #38bdf8;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.student-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.student-photo-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #38bdf8;
+  flex-shrink: 0;
+}
+
+.student-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.student-basic-info {
+  flex: 1;
+}
+
+.student-basic-info h4 {
+  margin: 0 0 5px 0;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.student-basic-info p {
+  margin: 3px 0;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.student-status {
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 15px;
+}
+
+.proctor-id {
+  color: #fbbf24;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Welcome Message */
+.welcome-message {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 40px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(56, 189, 248, 0.3);
+}
+
+.welcome-message h3 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.welcome-message p {
+  color: #e2e8f0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Loading and No Data States */
+.loading-message,
+.no-data-message {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  color: white;
+  margin: 20px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.no-data-message h3 {
+  color: #fbbf24;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.back-button,
+.view-attendance-btn {
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.back-button:hover,
+.view-attendance-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Statistics Section */
+.stats-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  margin: 25px 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stats-section h3 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.stat-card {
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+}
+
+.stat-card h4 {
+  margin: 0 0 10px 0;
+  color: #f8fafc;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 10px 0;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+/* Tables */
+.students-table-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.students-table th {
+  background: rgba(56, 189, 248, 0.3);
+  color: white;
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.students-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.students-table tr {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.students-table tr:hover {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.students-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Attendance Percentage Styles */
+.attendance-percentage {
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.percentage-excellent {
+  background: rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+}
+
+.percentage-good {
+  background: rgba(34, 197, 94, 0.2);
+  color: #86efac;
+}
+
+.percentage-average {
+  background: rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+}
+
+.percentage-poor {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+}
+
+.percentage-critical {
+  background: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-absent {
+  background: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+.status-od {
+  background: rgba(245, 158, 11, 0.3);
+  color: #fde68a;
+}
+
+.status-present {
+  background: rgba(34, 197, 94, 0.3);
+  color: #86efac;
+}
+
+/* Student Details View */
+.student-details-container {
+  background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+.ac-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ac-header h1 {
+  color: #38bdf8;
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.student-header-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.student-header-content {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.student-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.student-header-content h2 {
+  margin: 0 0 8px 0;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.student-regno {
+  color: #38bdf8;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 10px 0;
+}
+
+.student-details {
+  margin: 5px 0;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .proctor-dashboard-container {
+    padding: 15px;
+  }
+  
+  .staff-filters {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .selection-group {
+    min-width: auto;
+  }
+  
+  .students-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .student-card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .dashboard-header h2 {
+    font-size: 2rem;
+  }
+  
+  .welcome-message {
+    padding: 30px 20px;
+    margin-top: 20px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .student-header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .ac-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+/* API Status Indicators */
+.api-status-indicator {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-success {
+  background-color: rgba(34, 197, 94, 0.3);
+  color: #86efac;
+}
+
+.status-warning {
+  background-color: rgba(245, 158, 11, 0.3);
+  color: #fde68a;
+}
+
+.status-error {
+  background-color: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+.status-loading {
+  background-color: rgba(56, 189, 248, 0.3);
+  color: #7dd3fc;
+}
+
+.status-pending {
+  background-color: rgba(100, 116, 139, 0.3);
+  color: #cbd5e1;
+}
+
+.click-hint {
+  text-align: center;
+  color: #cbd5e1;
+  font-style: italic;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+/* Selection Filters */
+.selection-filters {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.selected-class-info {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.selected-class-info h3 {
+  color: #38bdf8;
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 50px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin-top: 30px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(56, 189, 248, 0.3);
+}
+
+.welcome-section h2 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.welcome-section ul {
+  text-align: left;
+  display: inline-block;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.welcome-section li {
+  margin: 10px 0;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+}
+
+/* Students Table Section */
+.students-section {
+  margin-top: 30px;
+}
+
+.students-section h3 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.students-table-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.students-table th {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.4) 0%, rgba(14, 165, 233, 0.4) 100%);
+  color: white;
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.students-table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.students-table th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.students-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.students-table tr {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.students-table tr:hover {
+  background: rgba(56, 189, 248, 0.15);
+}
+
+.students-table tr:hover td {
+  color: white;
+  transform: translateX(2px);
+}
+
+.students-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Column-specific styling */
+.students-table td:first-child {
+  font-weight: 700;
+  color: #fbbf24; /* Gold color for Reg No */
+}
+
+.students-table td:nth-child(2) {
+  font-weight: 600;
+  color: white;
+}
+
+.students-table td:nth-child(3),
+.students-table td:nth-child(4),
+.students-table td:nth-child(5),
+.students-table td:nth-child(7) {
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+/* Attendance percentage styling */
+.attendance-percentage {
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+}
+
+.percentage-excellent {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.percentage-good {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.percentage-average {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.percentage-poor {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fcd34d;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.percentage-critical {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* View Details Button */
+.view-attendance-btn {
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.view-attendance-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(56, 189, 248, 0.4);
+  background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+}
+
+/* Header alignment for specific columns */
+.students-table th:nth-child(1) { /* REG NO */
+  width: 120px;
+}
+
+.students-table th:nth-child(2) { /* NAME */
+  width: 200px;
+}
+
+.students-table th:nth-child(3), /* DEPARTMENT */
+.students-table th:nth-child(4), /* YEAR */
+.students-table th:nth-child(5) { /* SECTION */
+  width: 100px;
+  text-align: center;
+}
+
+.students-table th:nth-child(6) { /* ATTENDANCE % */
+  width: 120px;
+  text-align: center;
+}
+
+.students-table th:nth-child(7) { /* PROCTOR ID */
+  width: 100px;
+  text-align: center;
+}
+
+.students-table th:nth-child(8) { /* ACTIONS */
+  width: 120px;
+  text-align: center;
+}
+
+/* Center align specific columns */
+.students-table td:nth-child(3),
+.students-table td:nth-child(4),
+.students-table td:nth-child(5),
+.students-table td:nth-child(6),
+.students-table td:nth-child(7),
+.students-table td:nth-child(8) {
+  text-align: center;
+}
+
+/* Responsive table */
+@media (max-width: 1024px) {
+  .students-table-container {
+    overflow-x: auto;
+  }
+  
+  .students-table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .students-table th,
+  .students-table td {
+    padding: 12px 8px;
+    font-size: 0.8rem;
+  }
+  
+  .attendance-percentage {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    min-width: 50px;
+  }
+  
+  .view-attendance-btn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Empty state styling */
+.no-students-message {
+  text-align: center;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+}
+
+.no-students-message h4 {
+  color: #fbbf24;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.no-students-message p {
+  font-size: 1rem;
+  margin: 8px 0;
+  opacity: 0.9;
+}
+
+/* Loading state */
+.table-loading {
+  text-align: center;
+  padding: 40px;
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+.table-loading::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #38bdf8;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Click hint */
+.click-hint {
+  text-align: center;
+  color: #cbd5e1;
+  font-style: italic;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Statistics above table */
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #38bdf8;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+}
